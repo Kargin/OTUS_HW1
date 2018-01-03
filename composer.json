@@ -1,0 +1,6 @@
+{
+    "name": "zeolite/project_bracketeer",
+    "require": {
+        "kargin/bracketeer": "dev-master"
+    }
+}
