@@ -11,12 +11,22 @@ use Kargin\Bracketeer;
 
 $bracketeer = new Bracketeer();
 
-function printBool($b) {return ($b) ? 'OK' : 'NOT OK';}
-
-$test_string=file_get_contents('/home/zeolite/OTUS/HW1/composer_bracketeer/src/string');
-echo $test_string;
-try {
-    echo printBool($bracketeer->isBalanced($test_string));
-} catch (Exception $e) {
-    echo get_class($e) . ": " . $e->getMessage();
+function printBool($b) {return $b ? 'OK' : 'NOT OK';}
+function warning_handler($errno, $errstr) {
+ echo "ERROR\n$errstr\nERROR CODE = $errno\n";
 }
+
+$line = readline("Enter path to file that contains string with bracket problem: ");
+set_error_handler("warning_handler", E_WARNING);
+$test_string = file_get_contents($line);
+restore_error_handler();
+
+if ($test_string !== FALSE) {
+    echo $test_string;
+    try {
+        echo printBool($bracketeer->isBalanced($test_string));
+    } catch (Exception $e) {
+        echo get_class($e) . ": " . $e->getMessage();
+    }
+}
+
