@@ -11,7 +11,7 @@ use Kargin\Bracketeer;
 
 $bracketeer = new Bracketeer();
 
-function printBool($b) {return $b ? "OK\n": "NOT OK\n";}
+function printBool($b) {return $b ? "OK. Brackets in given string ARE balanced.\n": "ERROR. Brackets in given string are NOT balanced.\n";}
 function warning_handler($errno, $errstr) {
  echo "ERROR\n$errstr\nERROR CODE = $errno\n";
 }
