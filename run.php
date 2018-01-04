@@ -16,7 +16,11 @@ function warning_handler($errno, $errstr) {
  echo "ERROR\n$errstr\nERROR CODE = $errno\n";
 }
 
-$line = readline("Enter path to file that contains string with bracket problem: ");
+$line = readline("Enter path to file that contains string with bracket problem [tests/test_1]: ");
+if (empty($line)) {
+    $line = 'tests/test_1';
+}
+
 set_error_handler("warning_handler", E_WARNING);
 $test_string = file_get_contents($line);
 restore_error_handler();
