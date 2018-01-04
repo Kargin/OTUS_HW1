@@ -15,8 +15,9 @@ function printBool($b) {return $b ? 'OK' : 'NOT OK';}
 function warning_handler($errno, $errstr) {
  echo "ERROR\n$errstr\nERROR CODE = $errno\n";
 }
-
-$line = readline("Enter path to file that contains string with bracket problem [tests/test_1]: ");
+echo "Press \"Enter\" for using one of three default tests.\n";
+echo "Enter path to file that contains string with bracket problem [tests/test_1]: \n";
+$line = readline();
 if (empty($line)) {
     $line = 'tests/test_1';
 }
@@ -26,7 +27,6 @@ $test_string = file_get_contents($line);
 restore_error_handler();
 
 if ($test_string !== FALSE) {
-    echo $test_string;
     try {
         echo printBool($bracketeer->isBalanced($test_string));
     } catch (Exception $e) {
