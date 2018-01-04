@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kargin/bracketeer.git",
-                "reference": "55e42a36d9d7523ba95029517174d0da0395b726"
+                "reference": "0443250b47fb541f0a31eb5dfeeee6649ce15603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kargin/bracketeer/zipball/55e42a36d9d7523ba95029517174d0da0395b726",
-                "reference": "55e42a36d9d7523ba95029517174d0da0395b726",
+                "url": "https://api.github.com/repos/Kargin/bracketeer/zipball/0443250b47fb541f0a31eb5dfeeee6649ce15603",
+                "reference": "0443250b47fb541f0a31eb5dfeeee6649ce15603",
                 "shasum": ""
             },
             "require": {
@@ -40,7 +40,7 @@
                 }
             ],
             "description": "returns true if input string with \"(\", \"\\r\", \"\\t\", \"\\n\", \" \", \")\", contains equal number of \"(\" and \")\" symbols",
-            "time": "2018-01-03T10:13:35+00:00"
+            "time": "2018-01-04T09:48:28+00:00"
         }
     ],
     "packages-dev": [],
