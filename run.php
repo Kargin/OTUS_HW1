@@ -30,7 +30,8 @@ if ($test_string !== FALSE) {
     try {
         echo printBool($bracketeer->isBalanced($test_string));
     } catch (Exception $e) {
-        echo get_class($e) . ": " . $e->getMessage();
+        echo get_class($e) . ":\n";
+        echo $e->getMessage() . "\n";
     }
 }
 
